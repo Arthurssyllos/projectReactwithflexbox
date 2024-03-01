@@ -2,27 +2,29 @@ import React from "react";
 import { View } from "react-native";
 import { StyleSheet } from "react-native";
 
-const Quadradopequeno  = () => {
-
+const Quadradopequeno  = ({props}) => {
+    const {cor} = props;
     return (
-        <View style = {{...style.pequeno}}></View>
+        <View style = {{...style.pequeno,
+        backgroundColor: `${cor}`}}></View>
     );
 
 }
 
-const Quadradomedio  = () => {
-
+const Quadradomedio  = ({props}) => {
+    const {cor} = props;
     return (
         <View style = {{...style.medio,
-            backgroundColor: 'red' }}></View>
+            backgroundColor: `${cor}`}}></View>
     );
 
 }
 
-const Quadradogrande  = () => {
-
+const Quadradogrande  = ({props}) => {
+    const {cor} = props;
     return (
-        <View style = {{...style.grande}}></View>
+        <View style = {{...style.grande,
+            backgroundColor: `${cor}`}}></View>
     );
 
 }
@@ -31,9 +33,9 @@ const Quadrado  = () => {
     
     return (
         <View style ={{...style.container}}>
-            <Quadradopequeno/>
-            <Quadradomedio/>
-            <Quadradogrande/>
+            <Quadradopequeno cor={'purple'}/>
+            <Quadradomedioc cor={'cyan'}/>
+            <Quadradogrande cor={'pink'}/>
         </View>
     )
 
@@ -60,5 +62,6 @@ const style = StyleSheet.create({
         width: 150,
         height: 150,
         backgroundColor: 'green',
-    }
+    },
+
 });
