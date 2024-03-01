@@ -5,7 +5,7 @@ import { StyleSheet } from "react-native";
 const Quadradopequeno  = () => {
 
     return (
-        <View style = {{...styles.pequeno}}></View>
+        <View style = {{...style.pequeno}}></View>
     );
 
 }
@@ -13,7 +13,7 @@ const Quadradopequeno  = () => {
 const Quadradomedio  = () => {
 
     return (
-        <View style = {{...styles.medio,
+        <View style = {{...style.medio,
             backgroundColor: 'red' }}></View>
     );
 
@@ -22,7 +22,7 @@ const Quadradomedio  = () => {
 const Quadradogrande  = () => {
 
     return (
-        <View style = {{...styles.grande}}></View>
+        <View style = {{...style.grande}}></View>
     );
 
 }
@@ -30,7 +30,7 @@ const Quadradogrande  = () => {
 const Quadrado  = () => {
     
     return (
-        <View styles ={{...style.container}}>
+        <View style ={{...style.container}}>
             <Quadradopequeno/>
             <Quadradomedio/>
             <Quadradogrande/>
